@@ -12,9 +12,7 @@
             Belly = 1;
             Favorite = favorite;
         }
-
-
-        public void PrintDog()
+        public void PrintPet()
         {
             int petPad = Belly;
             string spacePad = " ";
@@ -26,20 +24,23 @@
             }
             else Console.WriteLine($"{Name} er død av for mye {Favorite}");
         }
-
-        public void FeedDog()
+        public void FeedPet()
         {
             Console.Clear();
             Console.WriteLine($"{Name} er ikke særlig begeistret, men spiser maten likevel...");
             Belly++;
 
         }
-
-        public void FeedDog(bool favorite)
+        public void FeedPet(bool favorite)
         {
             Console.Clear();
             Console.WriteLine($"{Name} er superglad og spiser {Favorite} så fort at du ikke ser hvor det blir av!");
             Belly = Belly + 10;
+        }
+        public void PetInfo(int index)
+        {
+            Console.WriteLine(
+                $"Dette er {Name}\r\n{Name} er hund nummer {index + 1}\r\n{Name} er {Belly} lang \r\n{Name}s favorittmat er {Favorite}");
         }
     }
 }
